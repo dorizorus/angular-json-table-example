@@ -1,0 +1,6 @@
+{{ person.id }} {{ person.name }} <div *ngFor="let vehicle of person.vehicles"> {{ vehicle.model }} {{ vehicle.garage?.id }} </div>
+
+<!-- garage?.id if garage == null -> skip c'est pas grave -->
+
+<!-- {{gno?.value?.text}} -> (gno == null ? "" : (gno.value == null ? "" : gno.value.text)) -->
+
