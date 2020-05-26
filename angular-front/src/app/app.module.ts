@@ -3,23 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PersonViewComponent } from './components/person-view/person-view.component';
-import { PersonService } from './services/person/person.service';
-import { PersonSingularComponent } from './components/person-singular/person-singular.component';
-import { HttpClientModule } from '@angular/common/http';
-import { PersonComponent } from './components/person/person.component';
-import { VehicleViewComponent } from './components/vehicle-view/vehicle-view.component';
-import { VehicleComponent } from './components/vehicle/vehicle.component';
-import {VehicleService} from './services/vehicle/vehicle.service';
+import { PersonViewComponent } from './components/person/person-view/person-view.component';
+import {PersonService} from './services/person/person.service';
+import { PersonComponent } from './components/person/person/person.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonViewComponent,
-    PersonSingularComponent,
-    PersonComponent,
-    VehicleViewComponent,
-    VehicleComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +21,6 @@ import {VehicleService} from './services/vehicle/vehicle.service';
   ],
   providers: [
     PersonService,
-    VehicleService
   ],
   bootstrap: [AppComponent]
 })

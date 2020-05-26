@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {PersonService} from '../../services/person/person.service';
-import {Person} from '../../models/person';
-import {Vehicle} from '../../models/vehicle';
+import {Person} from '../../../interfaces/person';
+import {Vehicle} from '../../../interfaces/vehicle';
 
 @Component({
   selector: 'app-person',
@@ -13,8 +12,7 @@ export class PersonComponent implements OnInit {
   @Input() person: Person;
   @Input() vehicle: Vehicle;
 
-  constructor(private personService: PersonService) {
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }

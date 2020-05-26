@@ -1,0 +1,5 @@
+{{ person.id }} - {{ person.name }}
+<ul class="group-list" *ngFor="let vehicle of person.vehicles">
+  <li> Véhicule : {{vehicle.id}} - {{vehicle.model}}</li>
+  <li *ngIf="vehicle.garage!=null"> Garage: {{ vehicle.garage.id }}</li>
+</ul>

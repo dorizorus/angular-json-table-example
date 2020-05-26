@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
-import {Observable, Subject} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
-import {Person} from '../../models/person';
-import {VehicleService} from '../vehicle/vehicle.service';
+import {Observable} from 'rxjs';
+import {Person} from '../../interfaces/person';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PersonService {
 
-  constructor(private httpClient: HttpClient) {}
+  persons: Person[];
+  constructor(private http: HttpClient) {}
 
   getPersonsFromServer(): Observable<Person[]> {
-    return this.httpClient.get<Person[]>('http://localhost:8080/test/all');
+    return this.http.get<Person[]>('http://localhost:8080/test/all');
   }
 }
